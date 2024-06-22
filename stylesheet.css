@@ -18,6 +18,10 @@ header {
     padding: 1rem 2rem;
     background-color: #2c3e50;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: flex; 
 }
 
 .logo img{
@@ -48,6 +52,7 @@ nav a:hover {
     background: url('/EmissionTrack 1.png') no-repeat center/cover;
     color: #000;
     border-radius: 10px;
+    margin-top:80px;
 }
 
 #hero h1{
