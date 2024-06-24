@@ -88,6 +88,12 @@ button {
     border-radius: 5px;
 }
 
+.social-media img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
 #home button:hover {
     background-color: #2dcc71;
 }
