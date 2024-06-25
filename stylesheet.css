@@ -16,13 +16,13 @@ body.light-mode {
 }
 
 body.light-mode #home {
-    background: url('/EmissionTrack_1-removebg-preview.png') no-repeat center/cover;
+    background: url('/EmissionTrack_5-removebg-preview.png') no-repeat top center;
     color: var(--color-black);
 }
 
 body:not(.light-mode) #home {
     background-color: var(--color-grey-4);
-    background: url('/EmissionTrack_1-removebg-preview.png') no-repeat center/cover;;
+    background: url('/EmissionTrack_5-removebg-preview.png') no-repeat top center;
     color: var(--color-white);
 }
 
@@ -63,9 +63,15 @@ nav a:hover {
 
 #home {
     text-align: center;
-    padding: 8rem;
+    padding: 18rem;
     border-radius: 10px;
     margin-top: 80px;
+    border: 1px solid var(--color-grey-1);
+    height: 100vh;
+}
+
+.welcome{
+    padding-top: 10%;
 }
 
 #home h1 {
@@ -99,7 +105,7 @@ button {
 }
 
 section {
-    padding: 2rem 2rem;
+    padding: 5rem 4rem;
 }
 
 section h2 {
@@ -436,4 +442,30 @@ footer a:hover {
         font-weight: bold;
         font-size: 1.2rem;
     }
+}
+
+.hover-to-color{
+    filter: grayscale((100%));
+    transition: filter 0.3s ease;
+}
+
+.hover-to-color{
+    filter: 0%;
+}
+
+#testimonials img,
+.team-member img,
+.hover-to-color {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: filter 0.3s ease; /* Added transition for smooth effect */
+}
+
+.hover-to-color {
+    filter: grayscale(100%);
+}
+
+.hover-to-color:hover {
+    filter: grayscale(0%);
 }
