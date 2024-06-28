@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #DAEEB7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 350px;
+    height: 120px;
+    margin-top: -10%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    color: #333;
+}
+
+nav ul li.active,
+nav ul li:hover,
+footer div:hover {
+    background-color: #F6FCF2;
+    color: #9FCC81;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+}
+
+footer div{
+    margin: 10px 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.uploads {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.uploads h2 {
+    margin-bottom: 20px;
+}
+
+.upload-box {
+    justify-content: center;
+}
+
+.button-inside{
+    margin-top: 15px;
+}
+
+.drop-zone {
+    border: 2px dashed #b6b6b6;
+    padding: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.small {
+    color: #b6b6b6;
+    margin-top: 10px;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+}
+
+.upload-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.upload-form .form-group {
+    flex: 1; 
+    display: flex;
+    flex-wrap: nowrap; 
+    align-items: flex-start; 
+}
+
+.upload-form .form-group .input-group {
+    flex: 1; 
+    display: flex;
+    gap: 10px; 
+}
+
+.upload-form-button{
+    align-self: flex-start; 
+    margin-left: 10px; 
+}
+
+.cancel,
+.upload {
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    margin-left: 80%;
+    color: #b6b6b6;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #95d5b2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.data-information table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-information th,
+.data-information td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.data-information th {
+    background-color: #f4f4f4;
+}
+
+.data-information td span {
+    color: #007bff;
+    cursor: pointer;
+}
+
+small {
+    color: #b6b6b6;
+}
+
+.hidden-input{
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    color: green;
+    border: none;
+    cursor: pointer;
+}
+
+.upload-form-button {
+    margin-top: 40px;
+}
+
+.button{
+    color: #fff;
+    background-color: #5CA72C;
+    border-radius: 5px;
+}
+
+.upload-form input[type="text"] {
+    border: 1px solid #5ca72c;
+}
+
+table thead th{
+    color: #565D6D;
+}
+
+tbody tr td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.carbon-button{
+    margin-left: 72%;
+}
+
+.carbon-button button {
+    border-radius: 7px;
+    background-color: #5CA72C;
+    color: #fff;
+}

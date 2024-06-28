@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/login.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-5">
+            <div class="login-container">
+                <h1>Sign In</h1>
+                <form action="#">
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" placeholder="example.email@gmail.com" />
+                        <label for="email" class="floating-label">Email</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="password" name="password" placeholder="Enter at least 8 Characters"/>
+                        <label for="password" class="floating-label">Password</label>
+                        <span class="password-toggle" id="eyeIcon" onclick="togglePassword()"><i class="bi bi-eye-slash"></i></span>
+                    </div>
+                    <div class="checkbox-container">
+                        <div>
+                            <input type="checkbox" id="remember-me" name="remember-me" />
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <button type="button" onclick="showVerificationDialog()">Sign in</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="container-image">
+                <img src="../Images/Screenshot 2024-06-27 102822.png" alt="login-side-image" class="img" />
+            </div>
+        </div>
+    </div>
+
+    <div id="verificationDialog" class="verification-dialog">
+        <span class="close-button" onclick="closeVerificationDialog()">&times;</span>
+        <div class="verification-content">
+            <h2>Almost Done</h2>
+            <p>Please type the code we sent you in your email:</p>
+            <div class="verification-inputs">
+                <input type="text" maxlength="1" pattern="[0-9]" oninput="moveToNext(this, 'code2')" id="code1" />
+                <input type="text" maxlength="1" pattern="[0-9]" oninput="moveToNext(this, 'code3')" id="code2" />
+                <input type="text" maxlength="1" pattern="[0-9]" oninput="moveToNext(this, 'code4')" id="code3" />
+                <input type="text" maxlength="1" pattern="[0-9]" oninput="moveToNext(this, 'code5')" id="code4" />
+                <input type="text" maxlength="1" pattern="[0-9]" oninput="moveToNext(this, 'code6')" id="code5" />
+                <input type="text" maxlength="1" pattern="[0-9]" id="code6" />
+            </div>
+            
+            <button onclick="showVerificationDialog(this )" class="button">Verify
+            <div class="loader hidden">
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+               <div class="containers">
+                    <div class="circle"></div>
+               </div>
+            </div>
+        </button>
+            <div id="countdownTimer"></div>
+            <p id="requestAnotherCodeLink" style="display:none;" onclick="requestAnotherCode()">Request another code</p>
+        </div>
+
+            <p class="access">Can't access your email? <b>Contact support.</b></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
+   <script src="../Script/login.js"></script>
+</body>
+</html>

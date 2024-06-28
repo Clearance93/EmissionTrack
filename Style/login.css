@@ -1,0 +1,362 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../Images/Untitled design.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container , .login-image {
+    height: 100%;
+}
+
+.login-image .img {
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 30px 10px 10px 10px; 
+    border-radius: 3px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #F3F4F6;
+    position: relative;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #ccc;
+    font-size: 12px; 
+    position: absolute;
+    top: 40px; 
+    left: 10px;
+}
+
+.floating-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+input[type="email"]:focus + .floating-label,
+input[type="password"]:focus + .floating-label,
+input[type="email"]:not(:placeholder-shown) + .floating-label,
+input[type="password"]:not(:placeholder-shown) + .floating-label {
+    top: 5px;
+    left: 10px;
+    font-size: 10px;
+    color: #333;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-container input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container label {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+    width: 16px; 
+    height: 16px; 
+    appearance: none; 
+    border: 2px solid #ccc; 
+    border-radius: 3px; 
+    cursor: pointer;
+    position: relative;
+    background-color: #fff; 
+}
+
+.checkbox-container input[type="checkbox"]:checked + label {
+    color: #ccc;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.checkbox-container a {
+    margin-left: 70px;
+    color: green;
+}
+
+a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+a:hover {
+    color: #3e8e41;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.verification-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 80px 70px 0px 70px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index:  1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.verification-content{
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.verification-inputs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#countdownTimer{
+    margin: 10px;
+}
+
+.access{
+    margin-top: 50px;
+}
+
+.verification-inputs input {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]:invalid {
+    border-color: red;
+}
+
+.verification-inputs input[type="text"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.close-button:hover{
+    color: #333;
+}
+
+.button {
+    background-color: grey;
+    color: white;
+    border-radius: 7px;
+}
+
+.containers {
+    height: 20px;
+    position: absolute;
+    animation: spin 3s linear infinite;
+    margin-top: -20px;
+    margin-left: 110px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(-0deg);
+    } to {
+        transform: rotate(-360deg);
+    }
+}
+
+.containers:nth-child(1) {
+    animation-delay: .3s;
+}
+.containers:nth-child(1) {
+    animation-delay: .3s;
+}
+.containers:nth-child(2) {
+    animation-delay: .6s;
+}
+.containers:nth-child(3) {
+    animation-delay: .9s;
+}
+.containers:nth-child(4) {
+    animation-delay: 1.2s;
+}
+.containers:nth-child(5) {
+    animation-delay: 1.5s;
+}
+.containers:nth-child(6) {
+    animation-delay: 1.8s;
+}
+.containers:nth-child(7) {
+    animation-delay: 2.1s;
+}
+.containers:nth-child(8) {
+    animation-delay:2.4s;
+}
+.containers:nth-child(9) {
+    animation-delay:2.7s;
+}
+.containers:nth-child(10) {
+    animation-delay:3s;
+}
+
+.containers .circle {
+    height: 3px;
+    width: 3px;
+    background-color: #000;
+    border-radius: 50%;
+    animation: dots 3s linear infinite;
+}
+
+@keyframes dots {
+    from {
+        background-color: #072401;
+    } to {
+        background-color: #174900;
+    }
+}
+
+.containers:nth-child(1) .circle{
+    animation-delay: .3s;
+}
+.containers:nth-child(1) .circle{
+    animation-delay: .3s;
+}
+.containers:nth-child(2) .circle{
+    animation-delay: .6s;
+}
+.containers:nth-child(3) .circle{
+    animation-delay: .9s;
+}
+.containers:nth-child(4) .circle{
+    animation-delay: 1.2s;
+}
+.containers:nth-child(5) .circle{
+    animation-delay: 1.5s;
+}
+.containers:nth-child(6) .circle{
+    animation-delay: 1.8s;
+}
+.containers:nth-child(7) .circle{
+    animation-delay: 2.1s;
+}
+.containers:nth-child(8) .circle{
+    animation-delay:2.4s;
+}
+.containers:nth-child(9) .circle{
+    animation-delay:2.7s;
+}
+.containers:nth-child(10) .circle{
+    animation-delay:3s;
+}
+
+.hidden{
+    display: none;
+}

@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #DAEEB7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 350px;
+    height: 120px;
+    margin-top: -10%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    color: #333;
+}
+
+nav ul li.active, 
+nav ul li:hover,
+footer div:hover {
+    background-color: #F6FCF2;
+    color: #9FCC81;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+}
+
+footer div{
+    margin: 10px 0;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dashboard h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.dashboard h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.Activities {
+    margin-bottom: 20px;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.activity-header {
+    display: flex;
+    align-items: center;
+}
+
+.activity-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.activity-details {
+    padding-left: 60px;
+}
+
+.activity-details span,
+.activity-details a {
+    display: block;
+    margin: 5px;
+    color: #555;
+}
+
+.charts{
+    padding-top: 70px;
+}
+
+.left-side {
+    padding-left: 100px;
+    margin-top: -50px;
+    margin-left: 50px;
+}
+
+.starts {
+    padding-top: 5%;
+}
+
+.emission-stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #555;
+}
+
+.stat span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
