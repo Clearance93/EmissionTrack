@@ -46,6 +46,10 @@ nav ul li {
     color: #333;
 }
 
+.search-bar-bg{
+    background-color: #ECFFCC;
+}
+
 .search-filter {
     display: flex;
     justify-content: space-between;
@@ -60,7 +64,7 @@ nav ul li {
     border-radius: 5px;
 }
 
-.search-filter .tags button {
+.tags button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -70,10 +74,7 @@ nav ul li {
     cursor: pointer;
 }
 
-
-nav ul li.active,
-nav ul li:hover,
-footer div:hover {
+nav ul li.active{
     background-color: #F6FCF2;
     color: #9FCC81;
     cursor: pointer;
@@ -145,7 +146,7 @@ footer div {
 }
 
 .invoice-btn {
-    padding: 4px;
+    padding: 2px;
     border: none;
     border-radius: 20px;
     background-color: #57a957;
@@ -191,4 +192,59 @@ header a {
 
 .bi-share {
     color: #61AFEB;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+nav ul li a:hover {
+    color: #9FCC81; 
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    color: #9FCC81;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+ol li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ol li a {
+    text-decoration: none;
+    color: #000; 
+    position: relative;
+}
+
+
+ol li.activated a {
+    color: green; 
+}
+
+ol li.activated a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: green; 
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.cart{
+    color: #379AE6;
+    margin-left: 470px;
 }

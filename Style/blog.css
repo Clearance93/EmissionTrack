@@ -1,0 +1,157 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-height: 40px;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.blog-post {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-date {
+    font-style: italic;
+    color: #666;
+}
+
+.blog-content {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #333;
+}
+
+blockquote p {
+    margin: 0;
+    font-style: italic;
+}
+
+blockquote footer {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#comments {
+    margin-top: 40px;
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.comment .comment-info {
+    display: flex;
+    align-items: center;
+}
+
+.comment .comment-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment .comment-author {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.comment .comment-date {
+    color: #666;
+}
+
+.footer-links {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 10px;
+    }
+
+    header .logo img {
+        max-height: 30px;
+    }
+}
+
+.blog-img{
+    width: 180px;
+    border-radius: 25px;
+}

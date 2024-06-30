@@ -23,10 +23,11 @@ p {
     color: grey;
 }
 
-button {
+.button {
     background-color: #5CA72C;
     border: none;
     padding: 10px 20px; 
     color: #fff;
     border-radius: 5px;
+    text-decoration: none;
 }

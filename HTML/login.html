@@ -13,7 +13,7 @@
         <div class="col-md-5">
             <div class="login-container">
                 <h1>Sign In</h1>
-                <form action="#">
+                <form id="loginForm" action="#">
                     <div class="input-container">
                         <input type="email" id="email" name="email" placeholder="example.email@gmail.com" />
                         <label for="email" class="floating-label">Email</label>
@@ -23,6 +23,7 @@
                         <label for="password" class="floating-label">Password</label>
                         <span class="password-toggle" id="eyeIcon" onclick="togglePassword()"><i class="bi bi-eye-slash"></i></span>
                     </div>
+                    <p id="passwordError" class="error-message">Password must be at least 8 characters long, containing letters, numbers, and symbols.</p>
                     <div class="checkbox-container">
                         <div>
                             <input type="checkbox" id="remember-me" name="remember-me" />
@@ -30,7 +31,7 @@
                         </div>
                         <a href="#">Forgot Password</a>
                     </div>
-                    <button type="button" onclick="showVerificationDialog()">Sign in</button>
+                    <button type="button" onclick="validateLogin()">Sign in</button>
                 </form>
             </div>
         </div>
@@ -55,48 +56,48 @@
                 <input type="text" maxlength="1" pattern="[0-9]" id="code6" />
             </div>
             
-            <button onclick="showVerificationDialog(this )" class="button">Verify
-            <div class="loader hidden">
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-               <div class="containers">
-                    <div class="circle"></div>
-               </div>
-            </div>
-        </button>
-            <div id="countdownTimer"></div>
+            <a href="#" onclick="verifyCode(this )" class="button">Verify
+                <div class="loader hidden">
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="containers">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </a>
+            <div id="countdownTimer">Time remaining: 1:00</div>
             <p id="requestAnotherCodeLink" style="display:none;" onclick="requestAnotherCode()">Request another code</p>
-        </div>
-
             <p class="access">Can't access your email? <b>Contact support.</b></p>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
-   <script src="../Script/login.js"></script>
+    <script src="../Script/login.js"></script>
 </body>
+</html>
 </html>

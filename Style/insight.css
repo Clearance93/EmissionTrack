@@ -46,9 +46,7 @@ nav ul li {
     color: #333;
 }
 
-nav ul li.active, 
-nav ul li:hover,
-footer div:hover {
+nav ul li.active {
     background-color: #F6FCF2;
     color: #9FCC81;
     cursor: pointer;
@@ -137,4 +135,23 @@ footer div{
 .compliance{
     padding-right: -100px;
     padding-top: 50px;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+nav ul li a:hover {
+    color: #9FCC81; 
+}
+
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    color: #9FCC81;
 }

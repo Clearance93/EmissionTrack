@@ -1,48 +1,40 @@
 function togglePassword() {
-    const passwordField = document.getElementById('password');
-    const passwordToggle = document.querySelector('.password-toggle');
-            
-    if (passwordField.type === 'password') {
-        passwordField.type = 'text';
-        passwordToggle.innerHTML = '<i class="bi bi-eye"></i>';
+    const passwordInput = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon').firstElementChild;
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.classList.replace('bi-eye-slash', 'bi-eye');
     } else {
-        passwordField.type = 'password';
-        passwordToggle.innerHTML = '<i class="bi bi-eye-slash"></i>';
+        passwordInput.type = 'password';
+        eyeIcon.classList.replace('bi-eye', 'bi-eye-slash');
     }
 }
 
-function showVerificationDialog(event) {
+function validateLogin() {
+    const password = document.getElementById('password').value;
+    const passwordError = document.getElementById('passwordError');
+
+    // Regular expression to validate password: at least 8 characters, with letters, numbers, and symbols
+    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}$/;
+
+    //admin@example.com default username
+    //Admin123! default password
+
+    if (!passwordPattern.test(password)) {
+        passwordError.style.display = 'block';
+    } else {
+        passwordError.style.display = 'none';
+        showVerificationDialog();
+    }
+}
+
+function showVerificationDialog() {
     document.getElementById('verificationDialog').style.display = 'block';
-
     startCountdown();
-
-    var bgcolor = '#9DF2B9';
-    var color = '#3e8e41'
-    event.style.backgroundColor = bgcolor;
-    event.style.color = color;
-
-    var loader = event.querySelector('.loader');
-    loader.classList.remove('hidden');
 }
 
-function startCountdown() {
-    let seconds = 60;
-    const countdownTimer = document.getElementById('countdownTimer');
-    const countdownInterval = setInterval(() => {
-        seconds--;
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
-        countdownTimer.textContent = `Time remaining: ${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
-        if (seconds <= 0) {
-            clearInterval(countdownInterval);
-            countdownTimer.textContent = 'Time expired';
-            document.getElementById('requestAnotherCodeLink').style.display = 'inline';
-        }
-    }, 1000);
-}
-
-function requestAnotherCode() {
-    alert('Requesting another code...');
+function closeVerificationDialog() {
+    document.getElementById('verificationDialog').style.display = 'none';
 }
 
 function verifyCode() {
@@ -52,29 +44,31 @@ function verifyCode() {
     const code4 = document.getElementById('code4').value;
     const code5 = document.getElementById('code5').value;
     const code6 = document.getElementById('code6').value;
-    
-    if (code1 && code2 && code3 && code4 && code5 && code6) {
-        document.getElementById('verifyButton').classList.add('enabled');
-        document.getElementById('verifyButtonText').style.display = 'none';
-        document.getElementById('spinner').style.display = 'inline-block';
-        document.getElementById('verifyButton').disabled = true;
 
-        setTimeout(() => {
-            closeVerificationDialog();
+    const enteredCode = code1 + code2 + code3 + code4 + code5 + code6;
+    const correctCode = "629001";
 
-            document.getElementById('verifyButtonText').style.display = 'inline';
-            document.getElementById('spinner').style.display = 'none';
-            document.getElementById('verifyButton').classList.remove('enabled');
-            document.getElementById('verifyButton').disabled = false;
-        }, 3000);
-        
+    if (enteredCode === correctCode) {
+        window.location.href = '/HTML/Dashboard.html';
     } else {
-        alert('Please enter the complete verification code.');
+        alert('Incorrect verification code. Please try again.');
     }
+
+    const verifyButton = document.getElementById('verifyButton');
+    verifyButton.classList.add('enabled');
+    verifyButton.disabled = false;
+
+    setTimeout(() => {
+        closeVerificationDialog();
+
+        document.getElementById('verifyButtonText').style.display = 'inline';
+        document.getElementById('spinner').style.display = 'none';
+        verifyButton.classList.remove('enabled');
+    }, 3000);
 }
 
-function closeVerificationDialog() {
-    document.getElementById('verificationDialog').style.display = 'none';
+function requestAnotherCode() {
+    alert('Requesting another code...');
 }
 
 function moveToNext(currentInput, nextInputId) {
@@ -98,11 +92,27 @@ function updateVerifyButtonState() {
 
     const verifyButton = document.getElementById('verifyButton');
 
-    if (code1 && code2 && code3 && code4 && code5 && code6){
+    if (code1 && code2 && code3 && code4 && code5 && code6) {
         verifyButton.classList.add('enabled');
         verifyButton.disabled = false;
     } else {
-        verifyButton.classList.remove('enabled')
+        verifyButton.classList.remove('enabled');
         verifyButton.disabled = true;
     }
+}
+
+function startCountdown() {
+    let seconds = 60;
+    const countdownTimer = document.getElementById('countdownTimer');
+    const countdownInterval = setInterval(() => {
+        seconds--;
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        countdownTimer.textContent = `Time remaining: ${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+        if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            countdownTimer.textContent = 'Time expired';
+            document.getElementById('requestAnotherCodeLink').style.display = 'inline';
+        }
+    }, 1000);
 }

@@ -255,6 +255,15 @@ input[type="text"]:invalid {
     background-color: grey;
     color: white;
     border-radius: 7px;
+    width: 94%;
+    padding: 3%;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.button:hover{
+    color: #fff;
+    background-color: #4CAF50;
 }
 
 .containers {
@@ -273,9 +282,6 @@ input[type="text"]:invalid {
     }
 }
 
-.containers:nth-child(1) {
-    animation-delay: .3s;
-}
 .containers:nth-child(1) {
     animation-delay: .3s;
 }
@@ -298,13 +304,13 @@ input[type="text"]:invalid {
     animation-delay: 2.1s;
 }
 .containers:nth-child(8) {
-    animation-delay:2.4s;
+    animation-delay: 2.4s;
 }
 .containers:nth-child(9) {
-    animation-delay:2.7s;
+    animation-delay: 2.7s;
 }
 .containers:nth-child(10) {
-    animation-delay:3s;
+    animation-delay: 3s;
 }
 
 .containers .circle {
@@ -323,40 +329,43 @@ input[type="text"]:invalid {
     }
 }
 
-.containers:nth-child(1) .circle{
+.containers:nth-child(1) .circle {
     animation-delay: .3s;
 }
-.containers:nth-child(1) .circle{
-    animation-delay: .3s;
-}
-.containers:nth-child(2) .circle{
+.containers:nth-child(2) .circle {
     animation-delay: .6s;
 }
-.containers:nth-child(3) .circle{
+.containers:nth-child(3) .circle {
     animation-delay: .9s;
 }
-.containers:nth-child(4) .circle{
+.containers:nth-child(4) .circle {
     animation-delay: 1.2s;
 }
-.containers:nth-child(5) .circle{
+.containers:nth-child(5) .circle {
     animation-delay: 1.5s;
 }
-.containers:nth-child(6) .circle{
+.containers:nth-child(6) .circle {
     animation-delay: 1.8s;
 }
-.containers:nth-child(7) .circle{
+.containers:nth-child(7) .circle {
     animation-delay: 2.1s;
 }
-.containers:nth-child(8) .circle{
-    animation-delay:2.4s;
+.containers:nth-child(8) .circle {
+    animation-delay: 2.4s;
 }
-.containers:nth-child(9) .circle{
-    animation-delay:2.7s;
+.containers:nth-child(9) .circle {
+    animation-delay: 2.7s;
 }
-.containers:nth-child(10) .circle{
-    animation-delay:3s;
+.containers:nth-child(10) .circle {
+    animation-delay: 3s;
 }
 
-.hidden{
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
     display: none;
 }

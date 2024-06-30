@@ -175,16 +175,18 @@ input[type="tel"],
     margin-bottom: 20px; 
 }
 
-.card-cart .card .cart-summary button {
+.card-cart .card .cart-summary .button {
     background-color: #5CA72C; 
     color: white; 
     border: none; 
-    padding: 10px 15px; 
+    padding: 10px 125px; 
     border-radius: 20px; 
     cursor: pointer; 
+   margin-top: -12px;
+   text-decoration: none;
 }
 
-.card-cart .card .cart-summary button:hover {
+.card-cart .card .cart-summary .button:hover {
     background-color: #338004; 
 }
 

@@ -46,9 +46,7 @@ nav ul li {
     color: #333;
 }
 
-nav ul li.active,
-nav ul li:hover,
-footer div:hover {
+nav ul li.active {
     background-color: #F6FCF2;
     color: #9FCC81;
     cursor: pointer;
@@ -178,4 +176,54 @@ header a {
 
 .bi-share {
     color: #61AFEB;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+nav ul li a:hover {
+    color: #9FCC81; 
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    color: #9FCC81;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+ol li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ol li a {
+    text-decoration: none;
+    color: #000; 
+    position: relative;
+}
+
+
+ol li.activated a {
+    color: green; 
+}
+
+ol li.activated a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: green; 
+    position: absolute;
+    bottom: -5px;
+    left: 0;
 }

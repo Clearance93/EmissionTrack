@@ -46,13 +46,6 @@ nav ul li {
     color: #333;
 }
  
-nav ul li:hover,
-footer div:hover {
-    background-color: #F6FCF2;
-    color: #9FCC81;
-    cursor: pointer;
-}
-
 .active {
     background-color: #F6FCF2;
     color: #9FCC81;
@@ -205,4 +198,22 @@ th {
 
 .features tr td i.bi-check-circle{
     color: #5acc2a;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+nav ul li a:hover {
+    color: #9FCC81; 
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    color: #9FCC81;
 }
