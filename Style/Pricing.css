@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #DAEEB7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 350px;
+    height: 120px;
+    margin-top: -10%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    color: #333;
+}
+ 
+nav ul li:hover,
+footer div:hover {
+    background-color: #F6FCF2;
+    color: #9FCC81;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #F6FCF2;
+    color: #9FCC81;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+}
+
+footer div{
+    margin: 10px 0;
+}
+
+
+.bottom-menu {
+    position: absolute;
+    bottom: 20px;
+}
+
+.bottom-menu a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-top: 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.plan {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.plan h2 {
+    margin-top: 0;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.price span {
+    font-size: 14px;
+    color: #666;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan ul li {
+    margin: 10px 0;
+}
+
+.plan ul li i {
+    color: #2c7c0a;
+}
+
+.plan button {
+    color: #6aa84f;
+    border: none;
+    padding: 10px 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #6aa84f;
+}
+
+.plan button:hover{
+    background-color: #6aa84f;
+    border: 1px solid green;
+    color: #fff;
+}
+
+
+.plan button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.features {
+    margin-top: 20px;
+}
+
+.features h2 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.standard {
+    background-color: #fff;
+    box-shadow: 1px 2px #ccc;
+}
+
+.standard button{
+    background-color: #2c7c0a;
+    color: #fff;
+}
+
+.standard button:hover{
+    background-color: green;
+}
+
+.standard h2{
+    font-weight: bolder;
+    color: #5acc2a;
+}
+
+.features tr td i.bi-check-circle{
+    color: #5acc2a;
+}
