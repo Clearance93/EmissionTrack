@@ -64,14 +64,20 @@ nav ul li {
     border-radius: 5px;
 }
 
+.tags{
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
 .tags button {
-    padding: 10px 20px;
+    padding: 5px 10px;
     border: none;
     border-radius: 5px;
     margin: 0 5px;
-    background-color: #57a957;
-    color: #fff;
+    background-color: #F6FCF2;
+    color: #57a957;
     cursor: pointer;
+    font-size: 14px;
 }
 
 nav ul li.active{
@@ -93,6 +99,11 @@ footer div {
     padding: 20px;
 }
 
+.search-bar-bg .search-filter .input-group {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 .img {
     width: 900px;
     margin-left: -20px;
@@ -109,15 +120,19 @@ footer div {
     background-color: #fff;
     width: 30%;
     margin: 10px 0;
-    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin-left: 20px;
 }
 
 .business-card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
+}
+
+.action-icons {
+    margin-left: -20px;
 }
 
 .business-info {
@@ -130,10 +145,16 @@ footer div {
     padding: 20px;
 }
 
+.up {
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+
 .business-info p {
     color: #777;
     font-size: 14px;
     padding: 20px;
+    margin-top: -50px;
 }
 
 .button{
@@ -195,12 +216,12 @@ header a {
 }
 
 nav ul li a {
-    text-decoration: none; 
-    color: inherit; 
+    text-decoration: none;
+    color: inherit;
 }
 
 nav ul li a:hover {
-    color: #9FCC81; 
+    color: #9FCC81;
 }
 
 footer a {
@@ -224,13 +245,13 @@ ol li {
 
 ol li a {
     text-decoration: none;
-    color: #000; 
+    color: #000;
     position: relative;
 }
 
 
 ol li.activated a {
-    color: green; 
+    color: green;
 }
 
 ol li.activated a::after {
@@ -238,13 +259,16 @@ ol li.activated a::after {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: green; 
+    background-color: green;
     position: absolute;
     bottom: -5px;
     left: 0;
 }
 
 .cart{
-    color: #379AE6;
-    margin-left: 470px;
+    margin-left: 500px;
+}
+
+.cart a i{
+    color: rgb(27, 201, 245);
 }

@@ -25,7 +25,7 @@
             </nav>
             <footer>
                 <div><i class="bi bi-person"></i><a href="/HTML/Profile.html"> Profile</a></div>
-                <div><i class="bi bi-telephone-inbound"></i><a href="#"> Contact Us</a></div>
+                <div><i class="bi bi-telephone-inbound"></i><a href="/HTML/contactUs.html"> Contact Us</a></div>
                 <div><i class="bi bi-box-arrow-in-right"></i><a href="/HTML/login.html"> Logout</a></div>
             </footer>
         </aside>
@@ -43,7 +43,7 @@
                 <div class="messages-list">
                     <table class="table table-borders">
                         <tr>
-                            <td>
+                            <td class="message-reporting">
                                 <div class="search-container">
                                     <input type="text" placeholder="Search message">
                                     <button class="search-button">🔍</button>
@@ -62,11 +62,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="message-reporting">
                                 <div class="message-item reporting">
                                     <div class="message-header">
                                         <div class="sender"><i class="bi bi-file-text"></i> Reporting</div>
-                                        <div class="timestamp">3 minutes ago</div>
+                                        <div class="timestamp" data-time="1689014892000">3 minutes ago</div>
                                     </div>
                                     <div class="message-body">
                                         <p class="message-text"><img src="/Images/James.jfif" alt="Add Collaborator" class="img"> James Green</p>
@@ -76,7 +76,7 @@
                                 <div class="message-item">
                                     <div class="message-header">
                                         <div class="sender"><i class="bi bi-file-text"></i> Data from your site</div>
-                                        <div class="timestamp">12 minutes ago</div>
+                                        <div class="timestamp" data-time="1689014292000">12 minutes ago</div>
                                     </div>
                                     <div class="message-body">
                                         <p class="message-text"><img src="/Images/Kyle-Ross.webp" alt="Add Collaborator" class="img"> Selena Kye</p>
@@ -86,7 +86,7 @@
                                 <div class="message-item">
                                     <div class="message-header">
                                         <div class="sender"><i class="bi bi-file-text"></i> Id elit in officia ni</div>
-                                        <div class="timestamp">1 hour ago</div>
+                                        <div class="timestamp" data-time="1689010692000">1 hour ago</div>
                                     </div>
                                     <div class="message-body">
                                         <p class="message-text"><img src="/Images/Jerry.jfif" alt="Add Collaborator" class="img"> Jerry Holland</p>
@@ -96,7 +96,7 @@
                                 <div class="message-item">
                                     <div class="message-header">
                                         <div class="sender"><i class="bi bi-file-text"></i> Ad magna mollit ullamco</div>
-                                        <div class="timestamp">2 hours ago</div>
+                                        <div class="timestamp" data-time="1689007092000">2 hours ago</div>
                                     </div>
                                     <div class="message-body">
                                         <p class="message-text"><img src="/Images/Frank.jpg" alt="Add Collaborator" class="img"> Frank Rutherford</p>
@@ -106,7 +106,7 @@
                                 <div class="message-item">
                                     <div class="message-header">
                                         <div class="sender"><i class="bi bi-file-text"></i> Pariatur officia ess</div>
-                                        <div class="timestamp">2 hours ago</div>
+                                        <div class="timestamp" data-time="1689007092000">2 hours ago</div>
                                     </div>
                                     <div class="message-body">
                                         <p class="message-text"><img src="/Images/Jevor.webp" alt="Add Collaborator" class="img"> Jevon Reynor</p>
@@ -120,21 +120,28 @@
                     <div class="message-conversation">
                         <h6 class="report">Reporting</h6>
                         <div class="message">
-                            <p class="timestamp">started 8 minutes ago by <a href="#">@James Green</a></p>
+                            <small style="color: rgb(85, 85, 85);">started 8 minutes ago by <a href="#">@James Green</a></small>
                             <p><strong><img src="/Images/Jerry.jfif" alt="Add Collaborator" class="img"> James Green</strong>: Hi there, just checking in your progress of <a href="#">the Secunda emission report</a></p>
                         </div>
                         <div class="message">
-                            <p class="timestamp">3 minutes ago</p>
+                            <small style="color: rgb(85, 85, 85);">3 minutes ago</small>
                             <p><strong><img src="/Images/emma_orig.jpg" alt="Add Collaborator" class="img"> Emma Willis</strong>: Making a good progress, I'll have something to demo early next week</p>
                         </div>
                     </div>
                     <hr>
                     <div class="message-input">
-                        <i class="bi bi-paperclip"></i> &nbsp;&nbsp;
-                        <i class="bi bi-image-fill"></i>&nbsp;&nbsp;
-                        <i class="bi bi-geo-alt"></i> &nbsp;&nbsp;
-                        <input type="text" placeholder="Type a message...">
-                        <button class="send-button">Send</button>
+                        <i class="bi bi-paperclip" id="upload-file"></i> &nbsp;&nbsp;
+                        <i class="bi bi-image-fill" id="upload-image"></i>&nbsp;&nbsp;
+                        <i class="bi bi-geo-alt" id="send-location"></i> &nbsp;&nbsp;
+                        <i class="bi bi-link-45deg" id="send-link"></i> &nbsp;&nbsp;
+                        <input type="text" id="message-input" placeholder="Type a message...">
+                        <button class="send-button" id="send-button">Send</button>
+                    </div>
+                    <input type="file" id="file-input" style="display: none;">
+                    <input type="file" id="image-input" accept="image/*" style="display: none;">
+                    <div id="link-modal" style="display: none;">
+                        <input type="text" id="link-input" placeholder="Enter URL">
+                        <button id="link-submit">Add Link</button>
                     </div>
                             </td>
                         </tr>
@@ -143,6 +150,7 @@
         </main>
     </div>
 
+    <script src="/Script/message.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

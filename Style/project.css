@@ -66,6 +66,8 @@ footer div {
     align-items: center;
     padding: 20px 0;
     align-items: center;
+    margin-right: 15%;
+    margin-left: 15%;
 }
 
 .search-filter input[type="text"] {
@@ -73,6 +75,12 @@ footer div {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.tags{
+    margin-right: 15%;
+    margin-left: 15%;
+    font-size: 13px;
 }
 
 .tags button {
@@ -89,6 +97,7 @@ footer div {
     margin-top: 15px;
     background-color:#ECFFCC;
     padding: 20px;
+    margin-top: -3px;
 }
 
 .business-list {
@@ -101,7 +110,6 @@ footer div {
     background-color: #fff;
     width: 30%;
     margin: 10px 0;
-    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -127,13 +135,28 @@ footer div {
 }
 
 .invoice-btn {
-    padding: 10px;
+    padding: 5px 20px;
     border: none;
     border-radius: 20px;
-    background-color: #57a957;
+    background-color: #519427;
     color: #fff;
     cursor: pointer;
     font-size: 12px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+.lakes{
+    margin-left: 16px;
+}
+
+
+.cart{
+    margin-left: 500px;
+}
+
+.cart a i{
+    color: rgb(27, 201, 245);
 }
 
 header {

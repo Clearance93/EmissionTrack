@@ -46,7 +46,7 @@ function verifyCode() {
     const code6 = document.getElementById('code6').value;
 
     const enteredCode = code1 + code2 + code3 + code4 + code5 + code6;
-    const correctCode = "629001";
+    const correctCode = "709333";
 
     if (enteredCode === correctCode) {
         window.location.href = '/HTML/Dashboard.html';
@@ -115,4 +115,11 @@ function startCountdown() {
             document.getElementById('requestAnotherCodeLink').style.display = 'inline';
         }
     }, 1000);
+}
+
+function startVerification(button) {
+    button.classList.add('loading'); 
+    setTimeout(() => {
+        button.classList.remove('loading');
+    }, 3000); 
 }

@@ -25,7 +25,7 @@
             </nav>
             <footer>
                 <div><i class="bi bi-person"></i><a href="/HTML/Profile.html"> Profile</a></div>
-                <div><i class="bi bi-telephone-inbound"></i><a href="#"> Contact Us</a></div>
+                <div><i class="bi bi-telephone-inbound"></i><a href="/HTML/contactUs.html"> Contact Us</a></div>
                 <div><i class="bi bi-box-arrow-in-right"></i><a href="/HTML/login.html"> Logout</a></div>
             </footer>
         </aside>
@@ -49,32 +49,34 @@
                 </nav>
             </header>
             <br /><br />
-            <div class="search-bar-bg">
-                <div class="search-filter">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <div class="search">
+                <div class="search-bar-bg">
+                    <div class="search-filter">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="search-input" placeholder="Search">
+                            <button class="input-group-text" id="search-button"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <button>Solar energy</button>
+                        <button>Wind energy</button>
+                        <button>Hydroelectric energy</button>
+                        <button>Energy storage and grid integration</button>
                     </div>
                 </div>
-                <div class="tags">
-                    <button>Solar energy</button>
-                    <button>Wind energy</button>
-                    <button>Hydroelectric energy</button>
-                    <button>Energy storage and grid integration</button>
-                </div>
             </div>
+            
             <div class="business-list">
-                <!-- Business Cards -->
                 <div class="business-card">
                     <img src="/Images/solar.png" alt="Solar">
                     <div class="business-info">
                         <h5>EcoSun Solutions Group</h5>
                         <p>Leading provider of solar energy solutions, specializing in residential and commercial solar panel installations</p>
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <button class="invoice-btn">Ask for an invoice</button>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-6">
                                 <div class="action-icons">
                                     <span class="stars">
                                         <i class="bi bi-star-fill"></i>
@@ -95,21 +97,23 @@
                     <div class="business-info">
                         <h5>WindWorks Energy</h5>
                         <p>Leading developer and operator of wind energy projects, dedicated to harnessing the power of the wind to generate clean, renewable electricity</p>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <button class="invoice-btn">Ask for an invoice</button>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="action-icons">
-                                    <span class="stars">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
-                                        <i class="bi bi-star"></i>
-                                    </span>
-                                    <span class="like"><i class="bi bi-heart"></i></span>
-                                    <span class="share"><i class="bi bi-share"></i></span>
+                        <div class="up">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button class="invoice-btn">Ask for an invoice</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="action-icons">
+                                        <span class="stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <i class="bi bi-star"></i>
+                                        </span>
+                                        <span class="like"><i class="bi bi-heart"></i></span>
+                                        <span class="share"><i class="bi bi-share"></i></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -121,10 +125,10 @@
                         <h5>BioPower Innovations</h5>
                         <p>Pioneering bioenergy company focused on producing renewable energy from biomass and organic waste materials</p>
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <button class="invoice-btn">Ask for an invoice</button>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-6">
                                 <div class="action-icons">
                                     <span class="stars">
                                         <i class="bi bi-star-fill"></i>
@@ -146,10 +150,10 @@
                         <h5>WaveTech Energy</h5>
                         <p>Cutting-edge wave energy company focused on harnessing ocean waves to generate renewable electricity</p>
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <button class="invoice-btn">Ask for an invoice</button>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-6">
                                 <div class="action-icons">
                                     <span class="stars">
                                         <i class="bi bi-star-fill"></i>
@@ -170,21 +174,23 @@
                     <div class="business-info">
                         <h5>HydroFlow Technologies</h5>
                         <p>Leading provider of hydropower solutions, committed to harnessing the power of water to generate renewable electricity</p>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <button class="invoice-btn">Ask for an invoice</button>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="action-icons">
-                                    <span class="stars">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
-                                    </span>
-                                    <span class="like"><i class="bi bi-heart"></i></span>
-                                    <span class="share"><i class="bi bi-share"></i></span>
+                        <div class="up">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button class="invoice-btn">Ask for an invoice</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="action-icons">
+                                        <span class="stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </span>
+                                        <span class="like"><i class="bi bi-heart"></i></span>
+                                        <span class="share"><i class="bi bi-share"></i></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -195,21 +201,23 @@
                     <div class="business-info">
                         <h5>Geothermal Dynamics</h5>
                         <p>Leading developer of geothermal energy projects, committed to harnessing the Earth's natural heat to produce clean, renewable electricity</p>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <button class="invoice-btn">Ask for an invoice</button>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="action-icons">
-                                    <span class="stars">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
-                                        <i class="bi bi-star"></i>
-                                        <i class="bi bi-star"></i>
-                                    </span>
-                                    <span class="like"><i class="bi bi-heart"></i></span>
-                                    <span class="share"><i class="bi bi-share"></i></span>
+                        <div class="up">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button class="invoice-btn">Ask for an invoice</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="action-icons">
+                                        <span class="stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <i class="bi bi-star"></i>
+                                            <i class="bi bi-star"></i>
+                                        </span>
+                                        <span class="like"><i class="bi bi-heart"></i></span>
+                                        <span class="share"><i class="bi bi-share"></i></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

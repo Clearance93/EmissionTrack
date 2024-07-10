@@ -53,7 +53,7 @@
                     <p>Leading the way in Emission data analysis and management.</p>
                 </div>
             </div>
-            <a class="button" href="/HTML/login.html" onclick="scrollToSection('overview')">Learn More</a>
+            <a class="button" href="/HTML/login.html" onclick="scrollToSection('overview')">Login</a>
         </section>
 
         <section id="overview">
@@ -92,15 +92,51 @@
             <p>At EmissionTrack, we are committed to revolutionizing the way businesses manage and reduce their emissions. Founded by industry experts with a passion for sustainability, we understand the complexities and challenges associated with emission data management and compliance. Our innovative solutions empower organizations to achieve their sustainability goals while ensuring regulatory compliance and operational efficiency.</p>
             <p>Our team combines deep expertise in environmental science with cutting-edge technology to deliver accurate, real-time insights into your carbon footprint. We pride ourselves on offering customized solutions tailored to the unique needs of each client, helping you transform your sustainability strategy into measurable results.</p>
             <p>Join the growing number of businesses who trust EmissionTrack to guide them on their journey towards a greener future. Together, we can make a significant impact on the environment while driving business success.</p>
-            <button onclick="scrollToSection('contact-us')" class="cta-button">Get in Touch</button>
+            <button id="requestDemoBtn">Request a Demo</button>
        
+            <div id="requestDemoModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Waiting List for requesting a Demo</h3>
+                    <p>Learn how EmissionTrack can help your organization reduce its carbon footprint and achieve sustainability goals. Our demo covers:</p>
+                    <ul>
+                        <li>An overview of our Carbon Accounting Software</li>
+                        <li>Insights into our Emissions Data Analysis tools</li>
+                        <li>Real-time data monitoring features</li>
+                        <li>Q&A session with our experts</li>
+                    </ul>
+                    <form id="requestDemoForm">
+                        <label for="fullName">Full Name:</label>
+                        <div class="input-group">
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        </div>
+    
+                        <label for="email">Email:</label>
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+    
+                        <label for="phone">Phone Number:</label>
+                        <div class="input-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+    
+                        <label for="company">Company Name:</label>
+                        <div class="input-group">
+                            <input type="text" id="company" name="company" placeholder="Enter your company name">
+                        </div>
+    
+                        <button type="submit">Submit</button>
+                    </form>
+                    <p id="requestDemoSuccess" style="display: none;">Thank you for your interest! We will get back to you soon.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="secondary-cta">
-            <h2>Explore More</h2>
-            <button onclick="scrollToSection('cta')">Request a Demo</button>
-            <button onclick="scrollToSection('contact-us')">Contact Sales</button>
-            
+        <section id="waitingListInfo" style="display: none;">
+            <h2>Waiting List Information</h2>
+            <p id="waitingListPosition"></p>
+            <p id="waitingListID"></p>
         </section>
         
         <section id="benifits">
@@ -114,7 +150,7 @@
         </section>
 
         <section id="testimonials">
-            <h2>Client Testimonials</h2>
+            <h2 class="client">Client Testimonials</h2>
             <div class="carousel">
                 <img class="hover-to-color" src="./images/Task_ Creating a Landing Page for EmissionTrack/1667502736481.jpeg" alt="Hlumisa Mazomba" />
                 <div class="carousel-inner" id="testimonial-carousel">
@@ -160,8 +196,6 @@
             <div id="countdown-clock"></div>
             <button id="openModalBtn">Join us</button>
         
-            <!-- Modal -->
-            <!-- Modal HTML -->
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>

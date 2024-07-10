@@ -61,7 +61,6 @@ nav ul li {
 }
 
 .tags button {
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     margin: 0 5px;
@@ -69,7 +68,6 @@ nav ul li {
     color: #fff;
     cursor: pointer;
 }
-
 
 nav ul li.active {
     background-color: #F6FCF2;
@@ -86,8 +84,9 @@ footer div {
 }
 
 .search-bar-bg {
-    margin-top: -5px;;
+    margin-top: -0px;;
     padding: 20px;
+    width: 100%;
 }
 
 .img {
@@ -99,14 +98,13 @@ footer div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: -18px;
+    margin-left: -10px;
 }
 
 .business-card {
     background-color: #fff;
     width: 30%;
     margin: 10px 0;
-    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -143,7 +141,6 @@ footer div {
 }
 
 .invoice-btn {
-    padding: 4px;
     border: none;
     border-radius: 20px;
     background-color: #57a957;
@@ -242,7 +239,11 @@ ol li.activated a::after {
     left: 0;
 }
 
+
 .cart{
-    color: #379AE6;
-    margin-left: 470px;
+    margin-left: 500px;
+}
+
+.cart a i{
+    color: rgb(27, 201, 245);
 }

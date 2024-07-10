@@ -96,9 +96,8 @@ h1 {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
-    width: 30%;
+    width: 40%;
     box-sizing: border-box;
-    text-align: center;
 }
 
 .plan h2 {
@@ -193,7 +192,7 @@ th {
 
 .standard h2{
     font-weight: bolder;
-    color: #5acc2a;
+    color: #5CA72C;
 }
 
 .features tr td i.bi-check-circle{

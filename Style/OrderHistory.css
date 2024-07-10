@@ -191,6 +191,32 @@ nav ul li a:hover {
     color: #9FCC81; 
 }
 
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-header a {
+    text-decoration: none;
+    color: #333;
+}
+
+.profile-header h5 {
+    margin: 0;
+}
+
+.order-history {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
 footer a {
     text-decoration: none;
     color: inherit;

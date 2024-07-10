@@ -89,3 +89,108 @@ function validateAndSubmit(event) {
     
     document.getElementById('newsletter-form').submit();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const requestDemoModal = document.getElementById('requestDemoModal');
+    const requestDemoBtn = document.getElementById('requestDemoBtn');
+    const requestDemoSpan = requestDemoModal.querySelector('.close');
+
+    requestDemoBtn.onclick = function() {
+        requestDemoModal.style.display = 'block';
+    }
+
+    requestDemoSpan.onclick = function() {
+        requestDemoModal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == requestDemoModal) {
+            requestDemoModal.style.display = 'none';
+        }
+    }
+
+    const waitingListModal = document.getElementById('waitingListModal');
+    const waitingListBtn = document.getElementById('waitingListBtn');
+    const waitingListSpan = waitingListModal.querySelector('.close');
+
+    waitingListBtn.onclick = function() {
+        waitingListModal.style.display = 'block';
+    }
+
+    waitingListSpan.onclick = function() {
+        waitingListModal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == waitingListModal) {
+            waitingListModal.style.display = 'none';
+        }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const waitingListModal = document.getElementById('waitingListModal');
+    const waitingListBtn = document.getElementById('waitingListBtn');
+    const waitingListSpan = waitingListModal.querySelector('.close');
+    const waitingListForm = document.getElementById('waitingListForm');
+    const waitingListSuccess = document.getElementById('waitingListSuccess');
+    const waitingListInfo = document.getElementById('waitingListInfo');
+    const waitingListPosition = document.getElementById('waitingListPosition');
+    const waitingListID = document.getElementById('waitingListID');
+
+    let waitingList = JSON.parse(localStorage.getItem('waitingList')) || [];
+
+    waitingListBtn.onclick = function() {
+        waitingListModal.style.display = 'block';
+    }
+
+    waitingListSpan.onclick = function() {
+        waitingListModal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == waitingListModal) {
+            waitingListModal.style.display = 'none';
+        }
+    }
+
+    waitingListForm.onsubmit = function(event) {
+        event.preventDefault();
+
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const company = document.getElementById('company').value;
+        const message = document.getElementById('message').value;
+
+        const newUser = {
+            id: 'ID-' + (waitingList.length + 1),
+            fullName: fullName,
+            email: email,
+            phone: phone,
+            company: company,
+            message: message,
+        };
+
+        waitingList.push(newUser);
+        localStorage.setItem('waitingList', JSON.stringify(waitingList));
+
+        const position = waitingList.length;
+        const userID = newUser.id;
+
+        sendEmail(email, position, userID);
+
+        waitingListSuccess.style.display = 'block';
+        waitingListInfo.style.display = 'block';
+        waitingListPosition.textContent = `You are number ${position} on the waiting list.`;
+        waitingListID.textContent = `Your ID is ${userID}.`;
+
+        waitingListModal.style.display = 'none';
+    }
+
+    function sendEmail(email, position, userID) {
+        console.log(`Sending email to ${email}...`);
+        console.log(`You are number ${position} on the waiting list.`);
+        console.log(`Your ID is ${userID}.`);
+    }
+});
